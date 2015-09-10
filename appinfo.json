@@ -1,19 +1,25 @@
 {
-  "uuid": "b4321f28-42bc-42b5-887f-d60cf46f36da",
-  "shortName": "propzee",
-  "longName": "propzee",
-  "capabilities": [ "location" ],
-  "companyName": "MakeAwesomeHappen",
-  "versionLabel": "1.0",
-  "sdkVersion": "3",
-  "targetPlatforms": ["aplite", "basalt"],
-  "watchapp": {
-    "watchface": false
-  },
-  "appKeys": {
-    "dummy": 0
-  },
-  "resources": {
-    "media": []
-  }
+    "appKeys": {
+        "dummy": 0
+    },
+    "capabilities": [
+        "location"
+    ],
+    "companyName": "MakeAwesomeHappen",
+    "longName": "propzee",
+    "projectType": "native",
+    "resources": {
+        "media": []
+    },
+    "sdkVersion": "3",
+    "shortName": "propzee",
+    "targetPlatforms": [
+        "aplite",
+        "basalt"
+    ],
+    "uuid": "b4321f28-42bc-42b5-887f-d60cf46f36da",
+    "versionLabel": "1.0",
+    "watchapp": {
+        "watchface": false
+    }
 }

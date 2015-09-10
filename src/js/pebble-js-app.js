@@ -5,8 +5,11 @@ var locationOptions = {
 };
 
 function locationSuccess(pos) {
-	lat = pos.coords.latitude
-	lon = pos.coords.longitude
+	var lat = pos.coords.latitude;
+	var lon = pos.coords.longitude;
+	
+	//lat = 40.4203143;
+	//lon = -74.3901083;
 
 	console.log('lat = ' + lat + ' lon = ' + lon);
 
@@ -16,17 +19,17 @@ function locationSuccess(pos) {
 	req.onload = function(e) {
 		if (req.readyState == 4 && req.status == 200) {
 			if(req.status == 200) {
-				var response = JSON.parse(req.responseText)
-				console.log(JSON.stringify(response, null, 2))
+				var response = JSON.parse(req.responseText);
+				console.log(JSON.stringify(response, null, 2));
 
-				if (response.err == null) {
+				if (response.err === null) {
 					Pebble.openURL(response.zillow.link);
 				}
 			} else { 
 				console.log('Error');
 			}
 		}
-	}
+	};
 
 	req.send(null);
 }
@@ -37,7 +40,7 @@ function locationError(err) {
 
 Pebble.addEventListener("ready",
 		function(e) {
-		    //console.log("Hello world! - Sent from your javascript application.");
+			//console.log("Hello world! - Sent from your javascript application.");
 		}
 );
 
